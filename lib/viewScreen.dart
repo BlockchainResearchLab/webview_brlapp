@@ -1,8 +1,8 @@
-import 'package:brl_webview/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-import 'package:webview_cookie_manager/webview_cookie_manager.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+
+import 'homeScreen.dart';
 
 class ViewScreen extends StatefulWidget {
   const ViewScreen({super.key, required this.websiteUrl});
@@ -18,7 +18,6 @@ class _ViewScreenState extends State<ViewScreen> {
   // final Completer<WebViewController> _completer =
   //     Completer<WebViewController>();
   late WebViewController _webViewController;
-  final cookieManager = WebviewCookieManager();
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +70,7 @@ class _ViewScreenState extends State<ViewScreen> {
                       request.url.startsWith("mailto")) {
                     _launchURL(request.url);
                     return NavigationDecision.prevent;
-                  } else if (request.url.startsWith("https//brlakgec.com")) {
+                  } else if (request.url.startsWith("https://brlakgec.com/")) {
                     Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(builder: (context) => HomeScreen()),
