@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => ViewScreen(
-                        websiteUrl: "https://reloadbrl.netlify.app/"))),
+                        websiteUrl: "https://register.brlakgec.com/"))),
             child: Text("Launch  Website")),
       )),
     );
